@@ -125,6 +125,7 @@ const Img = styled.img`
   background: white;
   border-radius: 10px;
   height: 100%;
+  max-width: 500px;
 `;
 
 const Wrapper = styled(motion.div)`
