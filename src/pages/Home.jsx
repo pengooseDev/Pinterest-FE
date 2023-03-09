@@ -57,6 +57,10 @@ const Home = () => {
 
   return (
     <Container>
+      <SavedWrapper onClick={SaveToggle}>
+        <Saved isOpen={isOpen} />
+      </SavedWrapper>
+      {isOpen ? <SavedBoard /> : null}
       {overlayToggleState && (
         <OverlayWrapper>
           <Overlay
@@ -73,11 +77,6 @@ const Home = () => {
       <ShuffleWrapper onMouseDown={shuffleDown} onClick={shuffle}>
         <ShuffleIcon />
       </ShuffleWrapper>
-
-      <SavedWrapper onClick={SaveToggle}>
-        <Saved isOpen={isOpen} />
-      </SavedWrapper>
-      {isOpen ? <SavedBoard /> : null}
 
       <Wrapper>
         {pins
